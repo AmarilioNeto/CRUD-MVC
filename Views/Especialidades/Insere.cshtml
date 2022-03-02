@@ -1,0 +1,47 @@
+﻿@model Academia_DKP.Models.Especialidade
+
+@{
+    ViewData["Title"] = "InserirEspecialidades";
+}
+
+<h1 class="alert-success">Inserir Especialidades</h1>
+<style>
+    .myBackground {
+        background-image: url(https://blog.imedicina.com.br/wp-content/uploads/2020/07/shutterstock_314744660-1.jpg);
+        color: black
+    }
+</style>
+
+<hr />
+<div  class="myBackground">
+    <div class="row">
+        <div class="col-md-12">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="descricaoEspecialidade" class="font-weight-bold">Descrição da Especialidade</label>
+                    <input asp-for="descricaoEspecialidade" class="form-control" />
+                    <span asp-validation-for="descricaoEspecialidade" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Ativa" class="font-weight-bold">Ativar</label>
+                    <input asp-for="numbool" class="tn-check" />
+                    <span asp-validation-for="Ativa" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <a asp-action="Create">
+                        <input type="submit" value="Salvar" class="btn btn-primary" />
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar ao Inicio</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

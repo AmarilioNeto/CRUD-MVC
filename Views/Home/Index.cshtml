@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" >
+            <div class="carousel-item active">
+                <img src="~/images/DKP.jpg" class="d-block w-100" alt="Imagem não pode ser Exibida" />
+                </div>
+            <div class="carousel-item">
+                <img src="~/images/consultorio-medico.jpg" class="d-block w-100" alt="Imagem não pode ser Exibida" />
+            </div>
+            </div>
+        </div>
+        <div class="alert-primary">
+            <h1 class="display-4">Seja Bem vindo</h1>
+        </div>
+        <br />
+    </div>
+<tbody>
+    
+    <tr>
+        <td>
+            <button class="alert-primary">
+                @Html.ActionLink("Especialidades", "", "Especialidades")
+            </button>
+        </td>
+    </tr>
+    
+</tbody>

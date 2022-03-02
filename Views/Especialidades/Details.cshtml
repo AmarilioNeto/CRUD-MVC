@@ -1,0 +1,52 @@
+﻿@model Academia_DKP.Models.Especialidade
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<h1 class="alert-success"> Escolha uma opção de ação</h1>
+<style>
+    .myBackground {
+        background-image: url(https://blog.imedicina.com.br/wp-content/uploads/2019/09/montar-um-consult%C3%B3rio-do-zero-e1568231383872.jpg);
+        color: black
+    }
+</style>
+
+    <div class="myBackground">
+        <div class="col-sm-12">
+            <hr />
+            <dl class="row">
+
+                <dt class="invisible">
+                    @Html.DisplayNameFor(model => model.idEspecialidade)
+                </dt>
+                <dd class="invisible">
+                    @Html.DisplayFor(model => model.idEspecialidade)
+                </dd>
+
+                <dt class="col-sm-12">
+                    Descrição da Especilaidade
+                </dt>
+                <dd class="col-sm-12">
+                    @Html.DisplayFor(model => model.descricaoEspecialidade)
+                </dd>
+                <dt class="col-sm-12">
+                    Ativa:
+                </dt>
+                <dd class="cols-sm-12">
+                    @Html.DisplayFor(model => model.numString)
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <div>
+        <button type="button" class="btn alert-success">
+            @Html.ActionLink("Editar", "Editar", new { id = Model.idEspecialidade })
+        </button>
+        <button type="button" class="btn alert-danger">
+            @Html.ActionLink("Deletar", "Delete", new { id = Model.idEspecialidade })
+        </button>
+        <a asp-action="Index">Voltar ao Inicio</a>
+    </div>
+

@@ -1,0 +1,35 @@
+﻿@model Academia_DKP.Models.Especialidade
+
+@{
+    ViewData["Title"] = "Deletar";
+}
+
+<h1>Deletar</h1>
+<style>
+    .myBackground {
+        background-image: url(https://eguren.com.br/blog/wp-content/uploads/2018/12/3-passos-para-montar-um-consultorio-medico.jpg);
+        color: black
+    }
+</style>
+
+    <h3 class="alert-danger">Você realmente deseja Excluir essa Especialidade?</h3>
+    <div class="myBackground">
+        <div class="col-md-12">
+            <hr />
+            <dl class="row">
+            </dl>
+            <div class="row">
+                <div class="col-md-6">
+                    <form asp-action="Delete" class="col-md-12">
+                        <input type="submit" value="Sim" class="btn btn-danger" />
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <form asp-action="Index" class="col-md-12">
+                        <input type="submit" value="Não" class="btn btn-primary" />
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
